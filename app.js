@@ -2,7 +2,7 @@ let numeroMinimo = 1;
 
 let numeroMaximo = 100;
 
-let numeroSecreto = Math.random() * numeroMaximo;
+let numeroSecreto = Math.random() * (numeroMaximo - numeroMinimo) + numeroMinimo;
 numeroSecreto = parseInt(numeroSecreto);
 
 let intentos = 5;
@@ -13,6 +13,7 @@ while(intentos > 0){
 
     if(numeroIngresado === 0)
         break;
+        
     else if(numeroIngresado === numeroSecreto){
         alert("FELICITACIONES!!! GANASTE");
         break;
